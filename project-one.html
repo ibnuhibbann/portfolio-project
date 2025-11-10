@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio - Ibnu Hibban</title>
+        <link rel="icon" type="image/png" href="assets/icon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="project.css" />
+        <script src="project.js" defer></script>
+    </head>
+
+    <body>
+        <section class="hero">
+            <a href="index.html" class="back-btn"> &#8592; Back </a>
+
+            <div class="hero-info">
+                <h1>Web Company Profile</h1>
+                <h2>PT Diya Property Utama</h2>
+            </div>
+        </section>
+
+        <section class="description">
+            <h2>
+                A company profile website for PT Diya Property Utama, a real estate
+                developer based in Indonesia. The website showcases the company's
+                projects, services, and contact information.
+            </h2>
+        </section>
+
+        <section class="portfolio">
+            <div class="wrapper project-wrapper">
+                <img src="assets/project-1.png" alt="" class="zoom-img"/>
+                <!-- <span class="tooltip">Project 1: Website Company</span> -->
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/project-1.png" alt="" class="zoom-img"/>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/project-1.png" alt="" class="zoom-img"/>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/project-1.png" alt="" class="zoom-img"/>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/project-1.png" alt="" class="zoom-img"/>
+            </div>
+        </section>
+
+         <!-- Modal untuk zoom -->
+            <div id="imgModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImg" />
+                <div id="caption"></div>
+            </div>
+
+        <footer>
+            <p>&copy; Ibnu Hibban 2023</p>
+        </footer>
+    </body>
+</html>

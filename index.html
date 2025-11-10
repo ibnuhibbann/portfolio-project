@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Ibnu Hibban</title>
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <section class="hero">
+        <!-- Tombol toggle theme dihapus karena hanya versi dark -->
+        <div class="hero-pic">
+            <img src="assets/profile1.png" alt="Ibnu Hibban" />
+        </div>
+        <div class="hero-info">
+            <h1>Ibnu Hibban</h1>
+            <h2>Full Stack Web Developer</h2>
+            <div class="logo-container">
+                <!-- Ganti logo light dengan versi dark jika ada -->
+                <a href="https://github.com/ibnuhibbann"><img src="assets/github_dark.png" alt="github logo" /></a>
+                <a href="mailto:ibnuhibban077@gmail.com"><img src="assets/email_dark.png" alt="email logo" /></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience">
+        <h2>Informatics Engineering<br />STMIK Widya Cipta Dharma</h2>
+    </section>
+
+    <section class="cta">
+        <a href="assets/CV.pdf" target="_blank">
+            <button class="btn download-btn">Download CV</button>
+        </a>
+    </section>
+
+    <section class="portfolio-skills">
+        <div class="btn-bg">
+            <button class="btn-2 active-btn" id="portfolio-btn">
+                Portfolio
+            </button>
+            <button class="btn-2" id="skills-btn">Skills</button>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="wrapper project-wrapper">
+            <a href="project-one.html">
+                <img src="assets/project-1.png" alt="Project 1" />
+                <span class="tooltip">Project 1: Website Company</span>
+            </a>
+        </div>
+        <div class="wrapper project-wrapper">
+            <a href="#">
+                <img src="assets/project-2.png" alt="Project 2" />
+                <span class="tooltip">Project 2: E-commerce Website</span>
+            </a>
+        </div>
+        <div class="wrapper project-wrapper">
+            <a href="#">
+                <img src="assets/project-3.png" alt="Project 3" />
+                <span class="tooltip">Project 3: Portfolio Website</span>
+            </a>
+        </div>
+        <div class="wrapper project-wrapper">
+            <a href="#">
+                <img src="assets/project-4.png" alt="Project 4" />
+                <span class="tooltip">Project 4: Website Company</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="wrapper">
+            <h3>Frontend</h3>
+            <article class="frontend-skills">
+                <p class="html">HTML</p>
+                <p class="css">CSS</p>
+                <p class="javascript">JavaScript</p>
+                <p class="vue">Vue.js</p>
+                <p class="bootstrap">Bootstrap</p>
+                <p class="tailwind">Tailwind</p>
+            </article>
+        </div>
+        <div class="wrapper">
+            <h3>Backend</h3>
+            <article class="backend-skills">
+                <p class="php">PHP</p>
+                <p class="mysql">MySQL</p>
+                <p class="apis">APIs</p>
+                <p class="laravel">Laravel</p>
+                <p class="xampp">XAMPP</p>
+                <p class="postman">Postman</p>
+            </article>
+        </div>
+        <div class="wrapper">
+            <h3>Others</h3>
+            <article class="backend-skills">
+                <p class="git">Git</p>
+                <p class="github">GitHub</p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Ibnu Hibban 2023</p>
+    </footer>
+</body>
+
+</html>
