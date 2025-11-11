@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio - Ibnu Hibban</title>
+        <link rel="icon" type="image/png" href="assets/icon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="project.css" />
+        <script src="project.js" defer></script>
+    </head>
+
+    <body>
+        <section class="hero">
+            <a href="index.html" class="back-btn"> &#8592; Back </a>
+
+            <div class="hero-info">
+                <h1>Sistem Absensi Karyawan RFID ESP32-CAM</h1>
+                <h2>STMIK Widya Cipta Dharma</h2>
+            </div>
+        </section>
+
+        <section class="description" style="margin-top: 5px">
+            <div class="desc-content" id="desc-content">
+                Sistem Absensi RFID ESP32-CAM adalah proyek aplikasi yang dikembangkan untuk sistem absensi karyawan di STMIK Widya Cipta Dharma. Sistem ini menggunakan kartu RFID untuk mencatat kehadiran masuk dan pulang, serta mengambil foto wajah karyawan secara otomatis melalui kamera ESP32-CAM setiap kali melakukan tap kartu. Data absensi tersimpan dan dapat diakses melalui aplikasi web yang menyediakan fitur pemantauan kehadiran bagi karyawan maupun admin, serta pengelolaan data karyawan dan rekap absensi secara terpusat.
+            </div>
+
+            <button id="toggle-desc" class="toggle-btn">&#x25B2;</button>
+            <!-- arrow down -->
+        </section>
+
+        <section class="stack">
+            <!-- PHP -->
+            <button class="stack-btn">
+                <img src="assets/php.svg" alt="PHP" class="stack-icon" />
+                PHP
+            </button>
+
+            <!-- Bootstrap -->
+            <button class="stack-btn">
+                <img
+                    src="assets/bootstrap.png"
+                    alt="Bootstrap"
+                    class="stack-icon"
+                />
+                Bootstrap
+            </button>
+
+            <!-- Postman / API -->
+            <button class="stack-btn">
+                <img
+                    src="https://cdn.worldvectorlogo.com/logos/postman.svg"
+                    alt="Postman"
+                    class="stack-icon"
+                />
+                Postman API
+            </button>
+
+            <!-- MySQL -->
+            <button class="stack-btn">
+                <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+                    alt="MySQL"
+                    class="stack-icon"
+                />
+                MySQL
+            </button>
+
+            <!-- Arduino IDE -->
+            <button class="stack-btn">
+                <img
+                    src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg"
+                    alt="Arduino IDE"
+                    class="stack-icon"
+                />
+                Arduino IDE
+            </button>
+
+            <!-- NodeMCU -->
+            <button class="stack-btn">
+                <img
+                    src="assets/espressif.png"
+                    alt="NodeMCU"
+                    class="stack-icon"
+                />
+                NodeMCU
+            </button>
+
+            <!-- ESP32-CAM -->
+            <button class="stack-btn">
+                <img
+                    src="assets/espressif.png"
+                    alt="ESP32-CAM"
+                    class="stack-icon"
+                />
+                ESP32-CAM
+            </button>
+        </section>
+
+        <section class="portfolio">
+            <div class="wrapper project-wrapper">
+                <img src="assets/absensi-karyawan/1.png" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Dashboard</span>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/absensi-karyawan/2.jpg" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Login</span>
+            </div>
+
+            <div class="wrapper project-wrapper">
+                <img
+                    src="assets/absensi-karyawan/3.jpg"
+                    alt=""
+                    class="zoom-img"
+                />
+                <span class="tooltip">Data Karyawan</span>
+            </div>
+
+            <div class="wrapper project-wrapper">
+                <img src="assets/absensi-karyawan/4.jpg" alt="" class="zoom-img" />
+                <span class="tooltip">Rekap Absensi</span>
+            </div>
+
+            <div class="wrapper project-wrapper">
+                <img src="assets/absensi-karyawan/7.jpg" alt="" class="zoom-img"/>
+                <span class="tooltip">Data Kartu RFID Tidak Dikenali</span>
+            </div>
+
+            <div class="wrapper project-wrapper">
+                <img src="assets/absensi-karyawan/8.jpg" alt="" class="zoom-img"/>
+                <span class="tooltip">Ubah Data Karyawan</span>
+            </div>
+
+            <div class="wrapper project-wrapper">
+                <img src="assets/absensi-karyawan/5.jpg" alt="" class="zoom-img"/>
+                <span class="tooltip">Tampilan Perangkat Tap Kartu Siap</span>
+            </div>
+
+            <div class="wrapper project-wrapper">
+                <img src="assets/absensi-karyawan/6.jpg" alt="" class="zoom-img" />
+                <span class="tooltip">Tampilan Perangkat Tap Kartu Masuk</span>
+            </div>
+
+            <div class="wrapper project-wrapper">
+                <img src="assets/absensi-karyawan/9.jpg" alt="" class="zoom-img" />
+                <span class="tooltip">Tampilan Perangkat Tap Kartu Pulang</span>
+            </div>
+        </section>
+
+        <!-- Modal untuk zoom -->
+        <div id="imgModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg" />
+            <div id="caption"></div>
+        </div>
+
+        <footer>
+            <p>&copy; Ibnu Hibban 2023</p>
+        </footer>
+    </body>
+</html>

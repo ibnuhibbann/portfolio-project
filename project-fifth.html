@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio - Ibnu Hibban</title>
+        <link rel="icon" type="image/png" href="assets/icon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="project.css" />
+        <script src="project.js" defer></script>
+    </head>
+
+    <body>
+        <section class="hero">
+            <a href="index.html" class="back-btn"> &#8592; Back </a>
+
+            <div class="hero-info">
+                <h1>Aplikasi Web Point Of Sale</h1>
+                <h2>Pandan Wangi Mart</h2>
+            </div>
+        </section>
+
+        <section class="description" style="margin-top: 5px">
+            <div class="desc-content" id="desc-content">
+                <p>
+                    Aplikasi Web Point Of Sale untuk Pandan Wangi Mart adalah solusi
+                    komprehensif yang dirancang untuk mengelola transaksi penjualan
+                   dan laporan keuangan secara efisien. Dengan antarmuka
+                    yang user-friendly, aplikasi ini memungkinkan staf toko untuk
+                    memproses penjualan dengan cepat, melacak stok barang secara real-time,
+                    dan menghasilkan laporan keuangan yang akurat. Aplikasi ini dikembangkan menggunakan PHP untuk logika backend, MySQL sebagai basis data untuk menyimpan informasi produk dan transaksi, serta CSS untuk desain antarmuka yang menarik dan responsif.
+                </p>
+            </div>
+
+            <button id="toggle-desc" class="toggle-btn">&#x25B2;</button>
+            <!-- arrow down -->
+        </section>
+
+        <section class="stack">
+            <!-- PHP -->
+            <button class="stack-btn">
+                <img src="assets/stack/php.svg" alt="PHP" class="stack-icon" />
+                PHP
+            </button>
+
+            <!-- CSS -->
+            <button class="stack-btn">
+                <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                    alt="CSS"
+                    class="stack-icon"
+                />
+                CSS
+            </button>
+
+            <!-- MySQL -->
+            <button class="stack-btn">
+                <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+                    alt="MySQL"
+                    class="stack-icon"
+                />
+                MySQL
+            </button>
+        </section>
+
+        <section class="portfolio">
+            <div class="wrapper project-wrapper">
+                <img src="assets/pw-mart/1.PNG" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Kasir</span>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/pw-mart/3.PNG" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Barang</span>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/pw-mart/4.PNG" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Kategori Barang</span>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/pw-mart/5.PNG" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Data Supplier</span>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/pw-mart/6.PNG" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Restok Barang</span>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/pw-mart/2.PNG" alt="" class="zoom-img" />
+                <span class="tooltip">Tampilan Struk Penjualan Barang</span>
+            </div>
+        </section>
+
+        <!-- Modal untuk zoom -->
+        <div id="imgModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg" />
+            <div id="caption"></div>
+        </div>
+
+        <footer>
+            <p>&copy; Ibnu Hibban 2023</p>
+        </footer>
+    </body>
+</html>

@@ -106,22 +106,94 @@ footer,
 
 .description {
     margin: auto;
-    max-width: 30rem;
-    
+    max-width: 40rem;
+    position: relative;
 }
 
 .description b {
     font-weight: 500;
 }
 
-.description h2 {
-    width: 100%;
-    font-weight: 300;
-    font-size: 0.9rem;
+/* ===== Toggle Deskripsi ===== */
+.desc-content {
+    overflow: hidden;
+    max-height: 60px; /* tinggi awal untuk teks singkat */
+    transition: max-height 0.5s ease; /* smooth slide */
+    font-size: 0.8rem;
     text-align: justify;
     text-justify: inter-word;
-    /* hyphens: auto; */
     text-align-last: left; /* supaya baris terakhir tidak rata tengah */
+    font-weight: 300;
+}
+
+.desc-content.expanded {
+    max-height: 1000px; /* tinggi untuk teks penuh */
+}
+
+.toggle-btn {
+    display: block;
+    margin: 11px auto 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-left: 14px;
+}
+
+.toggle-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.toggle-btn.up {
+    transform: rotate(180deg); /* arrow up */
+}
+
+.stack {
+    justify-content: center;
+}
+
+.stack {
+    margin: auto;
+    max-width: 45rem;
+}
+
+.stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* jarak antar tombol */
+    margin-top: 20px;
+}
+
+.stack-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* jarak icon dan teks */
+    padding: 8px 16px;
+    border: 1px solid #ffffff; /* border tipis abu */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stack-btn:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.stack-icon {
+    width: 20px;
+    height: 20px;
 }
 
 .btn,
@@ -163,6 +235,49 @@ footer,
 
 .project-wrapper:hover .tooltip {
     visibility: visible;
+    opacity: 1;
+}
+
+.wrapper.project-wrapper {
+    width: 400px;          /* lebar tetap, bisa sesuaikan */
+    height: 230px;         /* tinggi tetap agar semua gambar konsisten */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;   /* opsional, agar lebih rapi */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 10px;
+    flex: none;            /* agar flex container tidak merubah ukuran */
+}
+
+.wrapper.project-wrapper img.zoom-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* menjaga rasio gambar, crop jika perlu */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* hover zoom effect */
+.wrapper.project-wrapper img.zoom-img:hover {
+    transform: scale(1.05);
+}
+
+/* tooltip */
+.wrapper.project-wrapper .tooltip {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wrapper.project-wrapper:hover .tooltip {
     opacity: 1;
 }
 
@@ -334,7 +449,7 @@ footer {
         max-width: 18rem; /* Mengurangi lebar untuk layar kecil */
     }
 
-    .description h2 {
+    .desc-content {
         font-size: 0.7rem;
     }
 
@@ -351,6 +466,24 @@ footer {
         flex: none;
         margin-bottom: 1rem; /* beri jarak antar project */
     }
+
+    .stack {
+        justify-content: center;
+        gap: 12px;
+        margin-top: 15px;
+    }
+
+    .stack-btn {
+        padding: 6px 12px;
+        font-size: 9px;
+    }
+
+    .stack-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+
 }
 
 

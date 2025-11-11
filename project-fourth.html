@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio - Ibnu Hibban</title>
+        <link rel="icon" type="image/png" href="assets/icon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="project.css" />
+        <script src="project.js" defer></script>
+    </head>
+
+    <body>
+        <section class="hero">
+            <a href="index.html" class="back-btn"> &#8592; Back </a>
+
+            <div class="hero-info">
+                <h1>Aplikasi Web logistics engineering</h1>
+                <h2>PT Diya Property Utama</h2>
+            </div>
+        </section>
+
+        <section class="description" style="margin-top: 5px">
+            <div class="desc-content" id="desc-content">
+                Aplikasi Web Logistics Engineering adalah sistem berbasis web yang dirancang untuk mempermudah proses pengelolaan logistik dan administrasi keuangan di lingkungan teknisi dan pengelola apartemen. Aplikasi ini memiliki dua peran utama, yaitu admin yang memiliki akses penuh untuk mengelola data barang, transaksi, dan laporan keuangan, serta teknisi yang dapat melakukan transaksi dan membuat invoice pembayaran setelah melakukan perbaikan pada unit apartemen. Dengan aplikasi ini, proses pencatatan barang keluar masuk, pembuatan laporan, dan pengelolaan invoice dapat dilakukan secara digital dan efisien, menggantikan proses manual yang sebelumnya menggunakan Microsoft Excel.
+            </div>
+
+            <button id="toggle-desc" class="toggle-btn">&#x25B2;</button>
+            <!-- arrow down -->
+        </section>
+
+        <section class="stack">
+            <!-- PHP -->
+            <button class="stack-btn">
+                <img src="assets/stack/php.svg" alt="PHP" class="stack-icon" />
+                PHP
+            </button>
+
+            <!-- CSS -->
+            <button class="stack-btn">
+                <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                    alt="CSS"
+                    class="stack-icon"
+                />
+                CSS
+            </button>
+
+
+            <!-- MySQL -->
+            <button class="stack-btn">
+                <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+                    alt="MySQL"
+                    class="stack-icon"
+                />
+                MySQL
+            </button>
+        </section>
+
+        <section class="portfolio">
+            <div class="wrapper project-wrapper">
+                <img src="assets/logistic/1.JPG" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Dashboard</span>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/logistic/2.JPG" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Dashboard</span>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/logistic/3.png" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Dashboard</span>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/logistic/4.JPG" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Dashboard</span>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/logistic/5.JPG" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Dashboard</span>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/logistic/6.JPG" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Dashboard</span>
+            </div>
+        </section>
+
+        <!-- Modal untuk zoom -->
+        <div id="imgModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg" />
+            <div id="caption"></div>
+        </div>
+
+        <footer>
+            <p>&copy; Ibnu Hibban 2023</p>
+        </footer>
+    </body>
+</html>

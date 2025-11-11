@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio - Ibnu Hibban</title>
+        <link rel="icon" type="image/png" href="assets/icon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="project.css" />
+        <script src="project.js" defer></script>
+    </head>
+
+    <body>
+        <section class="hero">
+            <a href="index.html" class="back-btn"> &#8592; Back </a>
+
+            <div class="hero-info">
+                <h1>Aplikasi Web Apartemen <br>Pandan Wangi Suite Samarinda</h1>
+                <h2>PT Diya Property Utama</h2>
+            </div>
+        </section>
+
+        <section class="description" style="margin-top: 5px">
+            <div class="desc-content" id="desc-content">
+                Web Apartemen Pandan Wangi Suite Samarinda adalah aplikasi berbasis web yang dibangun menggunakan PHP, MySQL, dan Bootstrap, dirancang untuk membantu bagian front office atau admin dalam mengelola data penginapan tamu dan unit-unit apartemen. Melalui sistem ini, admin dapat mencatat data tamu, mengatur reservasi, memantau ketersediaan dan status setiap unit, serta mengelola informasi transaksi dan laporan secara efisien dan terpusat.
+            </div>
+
+            <button id="toggle-desc" class="toggle-btn">&#x25B2;</button>
+            <!-- arrow down -->
+        </section>
+
+        <section class="stack">
+            <!-- PHP -->
+            <button class="stack-btn">
+                <img src="assets/stack/php.svg" alt="PHP" class="stack-icon" />
+                PHP
+            </button>
+
+            <!-- Bootstrap -->
+            <button class="stack-btn">
+                <img
+                    src="assets/stack/bootstrap.png"
+                    alt="Bootstrap"
+                    class="stack-icon"
+                />
+                Bootstrap
+            </button>
+
+            <!-- MySQL -->
+            <button class="stack-btn">
+                <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+                    alt="MySQL"
+                    class="stack-icon"
+                />
+                MySQL
+            </button>
+        </section>
+
+        <section class="portfolio">
+            <div class="wrapper project-wrapper">
+                <img src="assets/pw-apart/2.JPG" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Dashboard</span>
+            </div>
+            <div class="wrapper project-wrapper">
+                <img src="assets/pw-apart/3.JPG" alt="" class="zoom-img" />
+                <span class="tooltip">Halaman Login</span>
+            </div>
+
+            <div class="wrapper project-wrapper">
+                <img src="assets/pw-apart/4.png" alt="" class="zoom-img" />
+                <span class="tooltip">Data Karyawan</span>
+            </div>
+
+            <div class="wrapper project-wrapper">
+                <img src="assets/pw-apart/5.JPG" alt="" class="zoom-img" />
+                <span class="tooltip">Rekap Absensi</span>
+            </div>
+
+            <div class="wrapper project-wrapper">
+                <img src="assets/pw-apart/6.jpg" alt="" class="zoom-img"/>
+                <span class="tooltip">Data Kartu RFID Tidak Dikenali</span>
+            </div>
+        </section>
+
+        <!-- Modal untuk zoom -->
+        <div id="imgModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg" />
+            <div id="caption"></div>
+        </div>
+
+        <footer>
+            <p>&copy; Ibnu Hibban 2023</p>
+        </footer>
+    </body>
+</html>

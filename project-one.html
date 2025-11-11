@@ -20,44 +20,115 @@
             <a href="index.html" class="back-btn"> &#8592; Back </a>
 
             <div class="hero-info">
-                <h1>Web Company Profile</h1>
-                <h2>PT Diya Property Utama</h2>
+                <h1>Aplikasi Web Desa Digital</h1>
+                <!-- <h2></h2> -->
             </div>
         </section>
 
-        <section class="description">
-            <h2>
-                A company profile website for PT Diya Property Utama, a real estate
-                developer based in Indonesia. The website showcases the company's
-                projects, services, and contact information.
-            </h2>
+        <section class="description" style="margin-top: 5px;">
+            <div class="desc-content" id="desc-content">
+                Aplikasi Web Desa Digital mempermudah kepala desa dan warga
+                dalam mengelola data secara efisien, dengan backend Laravel,
+                frontend Vue.js, dan database MySQL. Integrasi Midtrans
+                memungkinkan transaksi digital praktis, sementara kepala desa
+                dapat mengelola data penduduk, bantuan sosial, acara, dan
+                perencanaan pembangunan, dan warga dapat mengajukan klaim
+                bantuan sosial serta membeli tiket acara desa. Aplikasi ini
+                mendukung sistem komunitas dan pemerintahan digital modern.
+            </div>
+
+            <button id="toggle-desc" class="toggle-btn">&#x25B2;</button>
+            <!-- arrow down -->
+        </section>
+
+        <section class="stack">
+            <!-- PHP -->
+            <button class="stack-btn">
+                <img src="assets/php.svg" alt="PHP" class="stack-icon" />
+                PHP
+            </button>
+
+            <!-- Laravel -->
+            <button class="stack-btn">
+                <img
+                    src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg"
+                    alt="Laravel"
+                    class="stack-icon"
+                />
+                Laravel
+            </button>
+
+            <!-- Vue.js -->
+            <button class="stack-btn">
+                <img
+                    src="https://cdn.worldvectorlogo.com/logos/vue-9.svg"
+                    alt="Vue.js"
+                    class="stack-icon"
+                />
+                Vue
+            </button>
+
+            <!-- Postman / API -->
+            <button class="stack-btn">
+                <img
+                    src="https://cdn.worldvectorlogo.com/logos/postman.svg"
+                    alt="Postman"
+                    class="stack-icon"
+                />
+                Postman API
+            </button>
+
+            <!-- MySQL -->
+            <button class="stack-btn">
+                <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+                    alt="MySQL"
+                    class="stack-icon"
+                />
+                MySQL
+            </button>
+
+            <!-- Midtrans -->
+            <button class="stack-btn">
+                <img
+                    src="assets/midtrans.jpg"
+                    alt="Midtrans"
+                    class="stack-icon"
+                />
+                Midtrans
+            </button>
         </section>
 
         <section class="portfolio">
             <div class="wrapper project-wrapper">
-                <img src="assets/project-1.png" alt="" class="zoom-img"/>
-                <!-- <span class="tooltip">Project 1: Website Company</span> -->
+                <img src="assets/desa-digital/1.png" alt="" class="zoom-img" />
+                 <span class="tooltip">Login</span>
             </div>
             <div class="wrapper project-wrapper">
-                <img src="assets/project-1.png" alt="" class="zoom-img"/>
+                <img src="assets/desa-digital/2.png" alt="" class="zoom-img" />
+                <span class="tooltip">Dashboard</span>
             </div>
             <div class="wrapper project-wrapper">
-                <img src="assets/project-1.png" alt="" class="zoom-img"/>
+                <img src="assets/desa-digital/10.PNG" alt="" class="zoom-img" />
+                <span class="tooltip">Pembelian Tiket Event Desa</span>
+            </div>
+            
+            <div class="wrapper project-wrapper">
+                <img src="assets/desa-digital/3.PNG" alt="" class="zoom-img" />
+                <span class="tooltip">Data Kepala Keluarga</span>
             </div>
             <div class="wrapper project-wrapper">
-                <img src="assets/project-1.png" alt="" class="zoom-img"/>
-            </div>
-            <div class="wrapper project-wrapper">
-                <img src="assets/project-1.png" alt="" class="zoom-img"/>
+                <img src="assets/desa-digital/5.png" alt="" class="zoom-img" />
+                <span class="tooltip">Profil Desa</span>
             </div>
         </section>
 
-         <!-- Modal untuk zoom -->
-            <div id="imgModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="modalImg" />
-                <div id="caption"></div>
-            </div>
+        <!-- Modal untuk zoom -->
+        <div id="imgModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg" />
+            <div id="caption"></div>
+        </div>
 
         <footer>
             <p>&copy; Ibnu Hibban 2023</p>

@@ -117,9 +117,9 @@ article,
     width: 130%;
 }
 
-.wrapper img {
+/* .wrapper img {
     width: 100%;
-}
+} */
 
 .hero-pic img {
     height: 100%;
@@ -206,25 +206,42 @@ footer,
         background-color 0.3s ease, color 0.3s ease;
 }
 
-.tooltip {
-    visibility: hidden;
-    background-color: rgba(0,0,0,0.8);
-    color: #fff;
-    text-align: center;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    position: absolute;
-    bottom: 105%; /* letak tooltip di atas gambar */
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    white-space: nowrap;
-    z-index: 10;
+.wrapper.project-wrapper {
+    width: 400px;          
+    height: 230px;         
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 10px;
+    flex: none;            
 }
 
-.project-wrapper:hover .tooltip {
-    visibility: visible;
+.wrapper.project-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* ubah dari contain ke cover jika ingin isi penuh */
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+/* Tooltip */
+.wrapper.project-wrapper .tooltip {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Tooltip muncul saat hover link */
+.wrapper.project-wrapper a:hover .tooltip {
     opacity: 1;
 }
 
@@ -323,6 +340,38 @@ article p,
     align-items: center;
     gap: 2rem;
 }
+
+/* Icon di dalam skill */
+.skill-icon {
+    height: 20px;
+}
+
+.frontend-skills p,
+.backend-skills p,
+.others-skills p {
+    display: inline-flex;          /* fleksibel dan tetap inline */
+    align-items: center;           /* vertikal center */
+    justify-content: center;       /* horizontal center */
+    gap: 6px;                      /* jarak antara ikon dan teks */
+    padding: 0.5rem 0.9rem;
+    margin: 0.3rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    background-color: var(--btn-bg-light);
+    text-align: center;
+}
+
+
+
+/* Efek hover biar interaktif */
+.frontend-skills p:hover,
+.backend-skills p:hover,
+.others-skills p:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
 
 .wrapper img {
     border-radius: 1rem;
