@@ -97,7 +97,20 @@
             });
         </script>
     </head>
-    <body class="bg-bg text-white font-space">
+    <body class="bg-bg text-white font-space relative overflow-x-hidden">
+        <!-- GRADIENT BACKGROUND (MONOCHROME TOP-RIGHT) -->
+        <div class="pointer-events-none fixed inset-0 -z-10">
+            <!-- Base solid background -->
+            <div class="absolute inset-0 bg-bg"></div>
+
+            <!-- Soft gray gradient from top-right (smooth, no hard edges) -->
+            <div class="absolute inset-0 bg-[radial-gradient(120%_80%_at_100%_0%,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0.08)_20%,rgba(255,255,255,0.03)_35%,transparent_60%)]"></div>
+
+            <!-- Subtle diagonal texture -->
+            <div class="absolute inset-0 opacity-[0.05] bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.05)_0px,rgba(255,255,255,0.05)_1px,transparent_1px,transparent_6px)]"></div>
+        </div>
+            
+        </div>
         <!-- HERO -->
         <section data-aos="fade-up" class="flex flex-col items-center text-center gap-[1.2rem] mt-[2rem]">
             <div
@@ -193,7 +206,7 @@
             <!-- Desa Digital -->
             <a
                 href="web-desa-digital.html"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition">
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition" data-aos="fade-up" data-aos-delay="100">
                 <img
                     src="assets/desa-digital/2.png"
                     alt="Web Desa Digital"
@@ -208,7 +221,7 @@
             <!-- Web Apartemen -->
             <a
                 href="web-apartemen.html"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition" data-aos="fade-up" data-aos-delay="100"
             >
                 <img
                     src="assets/pw-apart/thumbnail-1.jpg"
@@ -224,7 +237,7 @@
             <!-- Logistic Engineering -->
             <a
                 href="logistic-engineering.html"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition" data-aos="fade-up" data-aos-delay="100"
             >
                 <img
                     src="assets/logistic/thumbnail.jpg"
@@ -240,7 +253,7 @@
             <!-- Point Of Sale -->
             <a
                 href="point-of-sale.html"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition" data-aos="fade-up" data-aos-delay="100"
             >
                 <img
                     src="assets/pw-mart/thumbnail.jpg"
@@ -256,13 +269,12 @@
             <!-- Personal Blog Web Apps -->
             <a
                 href="personal-blog.html"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition" data-aos="fade-up" data-aos-delay="100"
             >
-                <img
-                    src="assets/personal-blog/no-image.png"
-                    alt="Aplikasi Web Point Of Sale"
-                    class="w-full h-full object-cover"
-                />
+                <div class="w-full h-full flex flex-col items-center justify-center bg-[#111] text-textSub">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-[3rem] w-[3rem] mb-[0.5rem]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7l1.664 9.157A2 2 0 006.632 18h10.736a2 2 0 001.968-1.843L21 7M3 7h18M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" /></svg>
+                    <span class="text-[0.85rem]">Coming Soon</span>
+                </div>
                 <span
                     class="pointer-events-none absolute bottom-[10px] left-1/2 -translate-x-1/2 bg-black/60 px-[8px] py-[3px] rounded-[5px] text-[1rem] text-center leading-tight opacity-0 group-hover:opacity-100 transition"
                     >Personal Blog</span
@@ -272,13 +284,12 @@
             <!-- Web Antrian -->
             <a
                 href="#"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition" data-aos="fade-up" data-aos-delay="100"
             >
-                <img
-                    src="assets/antrian/no-image.png"
-                    alt="Aplikasi Web Point Of Sale"
-                    class="w-full h-full object-cover"
-                />
+                <div class="w-full h-full flex flex-col items-center justify-center bg-[#111] text-textSub">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-[3rem] w-[3rem] mb-[0.5rem]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7l1.664 9.157A2 2 0 006.632 18h10.736a2 2 0 001.968-1.843L21 7M3 7h18M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" /></svg>
+                    <span class="text-[0.85rem]">Coming Soon</span>
+                </div>
                 <span
                     class="pointer-events-none absolute bottom-[10px] left-1/2 -translate-x-1/2 bg-black/60 px-[8px] py-[3px] rounded-[5px] text-[1rem] text-center leading-tight opacity-0 group-hover:opacity-100 transition"
                     >Aplikasi Web Antrian</span
@@ -288,13 +299,12 @@
             <!-- Aplikasi Booking Lapangan Badminton -->
             <a
                 href="#"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition" data-aos="fade-up" data-aos-delay="100"
             >
-                <img
-                    src="assets/badminton-booking/no-image.png"
-                    alt="Sistem Absensi Karyawan RFID"
-                    class="w-full h-full object-cover"
-                />
+                <div class="w-full h-full flex flex-col items-center justify-center bg-[#111] text-textSub">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-[3rem] w-[3rem] mb-[0.5rem]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7l1.664 9.157A2 2 0 006.632 18h10.736a2 2 0 001.968-1.843L21 7M3 7h18M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" /></svg>
+                    <span class="text-[0.85rem]">Coming Soon</span>
+                </div>
                 <span
                     class="pointer-events-none absolute bottom-[10px] left-1/2 -translate-x-1/2 bg-black/60 px-[8px] py-[3px] rounded-[5px] text-[1rem] text-center leading-tight opacity-0 group-hover:opacity-100 transition"
                     >Aplikasi Web Booking Lapangan Badminton</span
@@ -304,7 +314,7 @@
             <!-- Absensi Karyawan -->
             <a
                 href="absensi-karyawan-rfid.html"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition" data-aos="fade-up" data-aos-delay="100"
             >
                 <img
                     src="assets/absensi-karyawan/thumbnail.jpg"
@@ -486,9 +496,10 @@
 
         <!-- FOOTER -->
         <footer
-            class="flex justify-center my-[3rem] text-[0.9rem] text-textSub"
+            class="flex justify-center mt-[4rem] mb-[2rem] text-[0.85rem] text-textSub opacity-80"
         >
             © Ibnu Hibban 2023
         </footer>
+        
     </body>
 </html>
