@@ -84,22 +84,12 @@
                 skillsBtn.addEventListener("click", activateSkills);
             });
         </script>
-    <!-- AOS Animation -->
-        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                AOS.init({
-                    duration: 700,
-                    easing: 'ease-out-cubic',
-                    once: true,
-                });
-            });
-        </script>
     </head>
     <body class="bg-bg text-white font-space">
         <!-- HERO -->
-        <section data-aos="fade-up" class="flex flex-col items-center text-center gap-[1.2rem] mt-[2rem]">
+        <section
+            class="flex flex-col items-center text-center gap-[1.2rem] mt-[2rem]"
+        >
             <div
                 class="w-[8rem] h-[8rem] mt-[1rem] rounded-full overflow-hidden flex items-center justify-center bg-black"
             >
@@ -112,7 +102,9 @@
 
             <div class="flex flex-col gap-[0.3rem]">
                 <h1 class="text-[1.5rem] font-normal">Ibnu Hibban</h1>
-                <h2 class="text-[1rem] text-textSub">Full Stack Web Developer</h2>
+                <h2 class="text-[1rem] text-textSub">
+                    Full Stack Web Developer
+                </h2>
 
                 <div class="flex justify-center gap-[1.8rem] mt-[0.5rem]">
                     <a href="https://github.com/ibnuhibbann">
@@ -137,14 +129,16 @@
         </section>
 
         <!-- EXPERIENCE -->
-        <section data-aos="fade-up" class="flex justify-center text-center mt-[1.4rem] max-w-[20rem] mx-auto">
+        <section
+            class="flex justify-center text-center mt-[1.4rem] max-w-[20rem] mx-auto"
+        >
             <h2 class="text-[0.9rem] text-textSub font-light">
                 Informatics Engineering<br />STMIK Widya Cipta Dharma
             </h2>
         </section>
 
         <!-- CTA -->
-        <section data-aos="fade-up" class="flex justify-center mt-[1.2rem]">
+        <section class="flex justify-center mt-[1.2rem]">
             <a href="#" target="_blank">
                 <button
                     class="w-[9rem] h-[3rem] rounded-[0.7rem] bg-btn font-semibold hover:bg-btnHover transition"
@@ -155,7 +149,7 @@
         </section>
 
         <!-- TOGGLE -->
-        <section data-aos="zoom-in" class="flex justify-center mt-[1.5rem]">
+        <section class="flex justify-center mt-[1.5rem]">
             <div
                 class="flex items-center gap-[2rem] bg-light p-[0.5rem] rounded-[0.7rem] w-[18rem] h-[3.2rem] justify-center"
             >
@@ -163,21 +157,19 @@
                     id="portfolio-btn"
                     class="w-[7rem] h-[2.5rem] rounded-[0.7rem] bg-white text-black font-semibold leading-none transition-all duration-300 ease-in-out hover:bg-black/10 hover:text-black"
                 >
-                    Project
-                </button>
+                    Project</button>
                 <button
                     id="skills-btn"
                     class="w-[7rem] h-[2.5rem] rounded-[0.7rem] bg-transparent text-[#828282] font-semibold leading-none transition-all duration-300 ease-in-out hover:bg-black/10 hover:text-black"
                 >
-                    Tech Stack
-                </button>
+                    Tech Stack</button>
             </div>
         </section>
 
         <!-- PORTFOLIO -->
 
         <!-- PROJECT HEADER -->
-        <section id="project-header" data-aos="fade-up" class="flex flex-col items-center text-center mt-[2rem] mb-[1.5rem] max-w-[42rem] mx-auto px-[1rem] transition-all duration-300 ease-in-out">
+        <section id="project-header" class="flex flex-col items-center text-center mt-[2rem] mb-[1.5rem] max-w-[42rem] mx-auto px-[1rem] transition-all duration-300 ease-in-out">
             <h2 class="text-[1.4rem] font-semibold mb-[0.6rem]">Discover what I've created</h2>
             <p class="text-textSub text-[0.95rem] leading-relaxed">
                 Each piece reflects my passion for innovation and commitment to delivering high-quality results.
@@ -186,14 +178,13 @@
         </section>
 
         <section
-            data-aos="fade-up"
             id="portfolio"
             class="flex flex-col items-center gap-[1.8rem] mt-[2rem] lg:flex-row lg:flex-wrap lg:justify-center lg:w-[65rem] lg:mx-auto transition-all duration-300 ease-in-out opacity-100"
         >
             <!-- Desa Digital -->
             <a
                 href="web-desa-digital.html"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition">
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition">
                 <img
                     src="assets/desa-digital/2.png"
                     alt="Web Desa Digital"
@@ -208,7 +199,7 @@
             <!-- Web Apartemen -->
             <a
                 href="web-apartemen.html"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
             >
                 <img
                     src="assets/pw-apart/thumbnail-1.jpg"
@@ -224,7 +215,7 @@
             <!-- Logistic Engineering -->
             <a
                 href="logistic-engineering.html"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
             >
                 <img
                     src="assets/logistic/thumbnail.jpg"
@@ -240,7 +231,7 @@
             <!-- Point Of Sale -->
             <a
                 href="point-of-sale.html"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
             >
                 <img
                     src="assets/pw-mart/thumbnail.jpg"
@@ -256,7 +247,7 @@
             <!-- Personal Blog Web Apps -->
             <a
                 href="personal-blog.html"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
             >
                 <img
                     src="assets/personal-blog/no-image.png"
@@ -272,7 +263,7 @@
             <!-- Web Antrian -->
             <a
                 href="#"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
             >
                 <img
                     src="assets/antrian/no-image.png"
@@ -288,7 +279,7 @@
             <!-- Aplikasi Booking Lapangan Badminton -->
             <a
                 href="#"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
             >
                 <img
                     src="assets/badminton-booking/no-image.png"
@@ -304,7 +295,7 @@
             <!-- Absensi Karyawan -->
             <a
                 href="absensi-karyawan-rfid.html"
-                class="group relative w-[460px] h-[260px]" data-aos="fade-up" data-aos-delay="100" overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+                class="group relative w-[460px] h-[260px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
             >
                 <img
                     src="assets/absensi-karyawan/thumbnail.jpg"
@@ -321,14 +312,14 @@
         <!-- SKILLS -->
 
         <!-- TECH STACK HEADER -->
-        <section id="skills-header" data-aos="fade-up" class="hidden flex flex-col items-center text-center mt-[2rem] mb-[1.5rem] max-w-[42rem] mx-auto px-[1rem] transition-all duration-300 ease-in-out">
+        <section id="skills-header" class="hidden flex flex-col items-center text-center mt-[2rem] mb-[1.5rem] max-w-[42rem] mx-auto px-[1rem] transition-all duration-300 ease-in-out">
             <h2 class="text-[1.4rem] font-semibold mb-[0.6rem]">Tools & technologies I work with</h2>
             <p class="text-textSub text-[0.95rem] leading-relaxed">
                 A collection of technologies and tools I use to design, build, and deliver reliable web applications
                 with a strong focus on performance, scalability, and clean architecture.
             </p>
         </section>
-        <section id="skills" data-aos="fade-up" class="hidden flex-col items-center mt-[2rem] transition-all duration-300 ease-in-out">
+        <section id="skills" class="hidden flex-col items-center mt-[2rem] transition-all duration-300 ease-in-out">
             <!-- GRID FRONTEND & BACKEND -->
             <div
                 class="w-full max-w-[56rem] flex flex-col gap-[2.5rem] lg:flex-row lg:justify-between"
