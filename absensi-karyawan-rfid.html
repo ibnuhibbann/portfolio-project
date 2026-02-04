@@ -1,166 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio - Ibnu Hibban</title>
+        <title>Sistem Absensi Karyawan RFID ESP32-CAM - Ibnu Hibban</title>
         <link rel="icon" type="image/png" href="assets/icon.png" />
+
+        <!-- Space Grotesk -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="css/project.css" />
-        <script src="js/project.js" defer></script>
+
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: { space: ["Space Grotesk", "sans-serif"] },
+                        colors: { bg: "#131313", sub: "#828282" },
+                    },
+                },
+            };
+        </script>
     </head>
+    <body class="bg-bg text-white font-space">
+        <!-- HERO -->
+        <section
+            class="relative flex flex-col items-center text-center gap-3 pt-16 px-4"
+        >
+            <a
+                href="index.html"
+                class="absolute top-4 left-4 z-10 text-sm px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 transition"
+                >← Back</a
+            >
 
-    <body>
-        <section class="hero">
-            <a href="index.html" class="back-btn"> &#8592; Back </a>
+            <h1 class="text-2xl font-medium">
+                Sistem Absensi Karyawan RFID ESP32-CAM
+            </h1>
+            <h2 class="text-sm text-sub">STMIK Widya Cipta Dharma</h2>
 
-            <div class="hero-info">
-                <h1>Sistem Absensi Karyawan RFID ESP32-CAM</h1>
-                <h2>STMIK Widya Cipta Dharma</h2>
+            <!-- DESCRIPTION -->
+            <div
+                class="max-w-2xl text-sm text-sub leading-relaxed relative mt-2"
+            >
+                <p
+                    id="desc"
+                    class="max-h-[60px] overflow-hidden transition-all duration-500 text-justify"
+                >
+                    Sistem Absensi RFID ESP32-CAM adalah proyek aplikasi yang
+                    dikembangkan untuk sistem absensi karyawan di STMIK Widya
+                    Cipta Dharma. Sistem ini menggunakan kartu RFID untuk
+                    mencatat kehadiran masuk dan pulang, serta mengambil foto
+                    wajah karyawan secara otomatis melalui kamera ESP32-CAM
+                    setiap kali melakukan tap kartu. Data absensi tersimpan dan
+                    dapat diakses melalui aplikasi web yang menyediakan fitur
+                    pemantauan kehadiran bagi karyawan maupun admin, serta
+                    pengelolaan data karyawan dan rekap absensi secara terpusat.
+                </p>
+                <button
+                    id="toggleDesc"
+                    class="mt-2 w-8 h-8 rounded-full bg-white text-black flex items-center justify-center mx-auto transition"
+                >
+                    ▼
+                </button>
+            </div>
+
+            <!-- STACK -->
+            <div class="flex flex-wrap justify-center gap-3 mt-5">
+                <span
+                    class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
+                    ><img src="assets/stack/php.svg" class="w-4" />PHP</span
+                >
+                <span
+                    class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
+                    ><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg"
+                        class="w-4"
+                    />Bootstrap</span
+                >
+                <span
+                    class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
+                    ><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+                        class="w-4"
+                    />MySQL</span
+                >
+                <span
+                    class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
+                    ><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/arduino/arduino-original.svg"
+                        class="w-4"
+                    />Arduino IDE</span
+                >
+                <span
+                    class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
+                    ><img
+                        src="assets/stack/espressif.png"
+                        class="w-4"
+                    />NodeMCU</span
+                >
+                <span
+                    class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
+                    ><img
+                        src="assets/stack/espressif.png"
+                        class="w-4"
+                    />ESP32-CAM</span
+                >
             </div>
         </section>
 
-        <section class="description" style="margin-top: 5px">
-            <div class="desc-content" id="desc-content">
-                Sistem Absensi RFID ESP32-CAM adalah proyek aplikasi yang dikembangkan untuk sistem absensi karyawan di STMIK Widya Cipta Dharma. Sistem ini menggunakan kartu RFID untuk mencatat kehadiran masuk dan pulang, serta mengambil foto wajah karyawan secara otomatis melalui kamera ESP32-CAM setiap kali melakukan tap kartu. Data absensi tersimpan dan dapat diakses melalui aplikasi web yang menyediakan fitur pemantauan kehadiran bagi karyawan maupun admin, serta pengelolaan data karyawan dan rekap absensi secara terpusat.
-            </div>
-
-            <button id="toggle-desc" class="toggle-btn">&#x25B2;</button>
-            <!-- arrow down -->
-        </section>
-
-        <section class="stack">
-            <!-- PHP -->
-            <button class="stack-btn">
-                <img src="assets/stack/php.svg" alt="PHP" class="stack-icon" />
-                PHP
-            </button>
-
-            <!-- Bootstrap -->
-            <button class="stack-btn">
-                <img
-                    src="assets/stack/bootstrap.png"
-                    alt="Bootstrap"
-                    class="stack-icon"
-                />
-                Bootstrap
-            </button>
-
-            <!-- Postman / API -->
-            <button class="stack-btn">
-                <img
-                    src="https://cdn.worldvectorlogo.com/logos/postman.svg"
-                    alt="Postman"
-                    class="stack-icon"
-                />
-                Postman API
-            </button>
-
-            <!-- MySQL -->
-            <button class="stack-btn">
-                <img
-                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
-                    alt="MySQL"
-                    class="stack-icon"
-                />
-                MySQL
-            </button>
-
-            <!-- Arduino IDE -->
-            <button class="stack-btn">
-                <img
-                    src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg"
-                    alt="Arduino IDE"
-                    class="stack-icon"
-                />
-                Arduino IDE
-            </button>
-
-            <!-- NodeMCU -->
-            <button class="stack-btn">
-                <img
-                    src="assets/stack/espressif.png"
-                    alt="NodeMCU"
-                    class="stack-icon"
-                />
-                NodeMCU
-            </button>
-
-            <!-- ESP32-CAM -->
-            <button class="stack-btn">
-                <img
-                    src="assets/stack/espressif.png"
-                    alt="ESP32-CAM"
-                    class="stack-icon"
-                />
-                ESP32-CAM
-            </button>
-        </section>
-
-        <section class="portfolio">
-            <div class="wrapper project-wrapper">
-                <img src="assets/absensi-karyawan/1.png" alt="" class="zoom-img" />
-                <span class="tooltip">Halaman Dashboard</span>
-            </div>
-            <div class="wrapper project-wrapper">
-                <img src="assets/absensi-karyawan/2.jpg" alt="" class="zoom-img" />
-                <span class="tooltip">Halaman Login</span>
-            </div>
-
-            <div class="wrapper project-wrapper">
-                <img
-                    src="assets/absensi-karyawan/3.jpg"
-                    alt=""
-                    class="zoom-img"
-                />
-                <span class="tooltip">Data Karyawan</span>
-            </div>
-
-            <div class="wrapper project-wrapper">
-                <img src="assets/absensi-karyawan/4.jpg" alt="" class="zoom-img" />
-                <span class="tooltip">Rekap Absensi</span>
-            </div>
-
-            <div class="wrapper project-wrapper">
-                <img src="assets/absensi-karyawan/7.jpg" alt="" class="zoom-img"/>
-                <span class="tooltip">Data Kartu RFID Tidak Dikenali</span>
-            </div>
-
-            <div class="wrapper project-wrapper">
-                <img src="assets/absensi-karyawan/8.jpg" alt="" class="zoom-img"/>
-                <span class="tooltip">Ubah Data Karyawan</span>
-            </div>
-
-            <div class="wrapper project-wrapper">
-                <img src="assets/absensi-karyawan/5.jpg" alt="" class="zoom-img"/>
-                <span class="tooltip">Tampilan Perangkat Tap Kartu Siap</span>
-            </div>
-
-            <div class="wrapper project-wrapper">
-                <img src="assets/absensi-karyawan/6.jpg" alt="" class="zoom-img" />
-                <span class="tooltip">Tampilan Perangkat Tap Kartu Masuk</span>
-            </div>
-
-            <div class="wrapper project-wrapper">
-                <img src="assets/absensi-karyawan/9.jpg" alt="" class="zoom-img" />
-                <span class="tooltip">Tampilan Perangkat Tap Kartu Pulang</span>
+        <!-- PORTFOLIO GRID -->
+        <section
+            class="mt-10 flex flex-col items-center gap-6 max-w-[65rem] mx-auto px-4"
+        >
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+                <div
+                    class="group relative h-[240px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/absensi-karyawan/1.png"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    /><span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition"
+                        >Dashboard</span
+                    >
+                </div>
+                <div
+                    class="group relative h-[240px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/absensi-karyawan/2.jpg"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    /><span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition"
+                        >Login</span
+                    >
+                </div>
+                <div
+                    class="group relative h-[240px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/absensi-karyawan/3.jpg"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    /><span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition"
+                        >Data Karyawan</span
+                    >
+                </div>
+                <div
+                    class="group relative h-[240px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/absensi-karyawan/4.jpg"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    /><span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition"
+                        >Rekap Absensi</span
+                    >
+                </div>
+                <div
+                    class="group relative h-[240px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/absensi-karyawan/7.jpg"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    /><span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition"
+                        >RFID Tidak Dikenali</span
+                    >
+                </div>
+                <div
+                    class="group relative h-[240px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/absensi-karyawan/8.jpg"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    /><span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition"
+                        >Ubah Data Karyawan</span
+                    >
+                </div>
+                <div
+                    class="group relative h-[240px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/absensi-karyawan/5.jpg"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    /><span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition"
+                        >Perangkat Siap</span
+                    >
+                </div>
+                <div
+                    class="group relative h-[240px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/absensi-karyawan/6.jpg"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    /><span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition"
+                        >Tap Masuk</span
+                    >
+                </div>
+                <div
+                    class="group relative h-[240px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/absensi-karyawan/9.jpg"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    /><span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition"
+                        >Tap Pulang</span
+                    >
+                </div>
             </div>
         </section>
 
-        <!-- Modal untuk zoom -->
-        <div id="imgModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="modalImg" />
-            <div id="caption"></div>
+        <!-- IMAGE MODAL -->
+        <div
+            id="imgModal"
+            class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50"
+        >
+            <span
+                id="closeModal"
+                class="absolute top-5 right-6 text-white text-3xl cursor-pointer"
+                >&times;</span
+            >
+            <img
+                id="modalImg"
+                class="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
+            />
         </div>
 
-        <footer>
-            <p>&copy; Ibnu Hibban 2023</p>
+        <footer class="mt-16 mb-6 text-center text-sm text-sub">
+            © Ibnu Hibban 2023
         </footer>
+
+        <script>
+            const btn = document.getElementById("toggleDesc");
+            const desc = document.getElementById("desc");
+            btn.addEventListener("click", () => {
+                desc.classList.toggle("max-h-[60px]");
+                desc.classList.toggle("max-h-[1000px]");
+                btn.textContent = btn.textContent === "▼" ? "▲" : "▼";
+            });
+
+            const modal = document.getElementById("imgModal");
+            const modalImg = document.getElementById("modalImg");
+            const closeModal = document.getElementById("closeModal");
+
+            document.querySelectorAll(".zoom-img").forEach((img) => {
+                img.addEventListener("click", () => {
+                    modal.classList.remove("hidden");
+                    modal.classList.add("flex");
+                    modalImg.src = img.src;
+                });
+            });
+
+            closeModal.addEventListener("click", () => {
+                modal.classList.add("hidden");
+                modal.classList.remove("flex");
+            });
+
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    modal.classList.add("hidden");
+                    modal.classList.remove("flex");
+                }
+            });
+        </script>
     </body>
 </html>
