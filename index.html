@@ -1,167 +1,413 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Ibnu Hibban</title>
-  <link rel="icon" type="image/png" href="assets/icon.png" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio - Ibnu Hibban</title>
+        <link rel="icon" type="image/png" href="assets/icon.png" />
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { poppins: ['Poppins', 'sans-serif'] },
-          colors: {
-            bg: '#131313',
-            textSub: '#828282',
-            btn: '#1e88e5',
-            btnHover: '#0d5e8c',
-            light: '#eeeeee'
-          }
-        }
-      }
-    }
-  </script>
 
-  <!-- JS ASLI (TIDAK DIUBAH) -->
-  <script src="js/script.js" defer></script>
-</head>
-<body class="bg-bg text-white font-poppins">
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: { 
+                            space: ['Space Grotesk', 'sans-serif']
+                        },
+                        colors: {
+                            bg: "#131313",
+                            textSub: "#828282",
+                            btn: "#1e88e5",
+                            btnHover: "#0d5e8c",
+                            light: "#eeeeee",
+                        },
+                    },
+                },
+            };
+        </script>
 
-<!-- HERO -->
-<section class="flex flex-col items-center text-center gap-[1rem] mt-[2rem]">
-  <div class="w-[8rem] h-[8rem] rounded-full overflow-hidden">
-    <img src="assets/profile1.png" alt="Ibnu Hibban" class="w-[130%] h-full object-cover object-[right_1.2rem_top_0]" />
-  </div>
+        <!-- FIX ANIMASI TOGGLE (TAILWIND) -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const portfolio = document.getElementById("portfolio");
+                const skills = document.getElementById("skills");
+                const portfolioBtn = document.getElementById("portfolio-btn");
+                const skillsBtn = document.getElementById("skills-btn");
 
-  <div class="flex flex-col gap-[0.5rem]">
-    <h1 class="text-[1.5rem] font-normal">Ibnu Hibban</h1>
-    <h2 class="text-[1rem] text-textSub">Full Stack Web Developer</h2>
+                const activeClasses = ["bg-white", "text-black"];
+                const inactiveClasses = ["bg-transparent", "text-[#828282]"];
 
-    <div class="flex justify-center gap-[1rem] mt-[0.5rem]">
-      <a href="https://github.com/ibnuhibbann">
-        <img src="assets/github_dark.png" alt="GitHub" class="h-[1.5rem] hover:scale-[0.98] transition" />
-      </a>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ibnuhibban077@gmail.com" target="_blank">
-        <img src="assets/email_dark.png" alt="Email" class="h-[1.5rem] hover:scale-[0.98] transition" />
-      </a>
-    </div>
-  </div>
-</section>
+                function activatePortfolio() {
+                    portfolio.classList.remove("hidden");
+                    portfolio.classList.add("flex");
+                    skills.classList.add("hidden");
 
-<!-- EXPERIENCE -->
-<section class="flex justify-center text-center mt-[1.4rem] max-w-[20rem] mx-auto">
-  <h2 class="text-[0.9rem] text-textSub font-light">
-    Informatics Engineering<br />STMIK Widya Cipta Dharma
-  </h2>
-</section>
+                    portfolioBtn.classList.remove(...inactiveClasses);
+                    portfolioBtn.classList.add(...activeClasses);
 
-<!-- CTA -->
-<section class="flex justify-center mt-[1.2rem]">
-  <a href="assets/CV-1.pdf" target="_blank">
-    <button class="w-[9rem] h-[3rem] rounded-[0.7rem] bg-btn font-semibold hover:bg-btnHover transition">
-      Download CV
-    </button>
-  </a>
-</section>
+                    skillsBtn.classList.remove(...activeClasses);
+                    skillsBtn.classList.add(...inactiveClasses);
+                }
 
-<!-- TOGGLE -->
-<section class="flex justify-center mt-[1.5rem]">
-  <div class="flex items-center gap-[2rem] bg-light p-[0.5rem] rounded-[0.7rem] w-[20rem] h-[4rem] justify-center">
-    <button id="portfolio-btn" class="w-[8.5rem] h-[3rem] rounded-[0.7rem] bg-white text-black font-semibold leading-none">
-      Portfolio
-    </button>
-    <button id="skills-btn" class="w-[8.5rem] h-[3rem] rounded-[0.7rem] bg-transparent text-[#828282] font-semibold leading-none">
-      Skills
-    </button>
-  </div>
-</section>
+                function activateSkills() {
+                    skills.classList.remove("hidden");
+                    skills.classList.add("flex");
+                    portfolio.classList.add("hidden");
 
-<!-- PORTFOLIO -->
+                    skillsBtn.classList.remove(...inactiveClasses);
+                    skillsBtn.classList.add(...activeClasses);
 
-<section id="portfolio" class="flex flex-col items-center gap-[1rem] mt-[2rem] lg:flex-row lg:flex-wrap lg:justify-center lg:w-[65rem] lg:mx-auto">
+                    portfolioBtn.classList.remove(...activeClasses);
+                    portfolioBtn.classList.add(...inactiveClasses);
+                }
 
-  <!-- Desa Digital -->
-  <a href="web-desa-digital.html" class="relative w-[400px] h-[230px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition">
-    <img src="assets/desa-digital/2.png" alt="Web Desa Digital" class="w-full h-full object-cover" />
-    <span class="absolute bottom-[10px] left-1/2 -translate-x-1/2 bg-black/60 px-[8px] py-[3px] rounded-[5px] text-[1rem] opacity-0 hover:opacity-100 transition">Web Desa Digital</span>
-  </a>
+                portfolioBtn.addEventListener("click", activatePortfolio);
+                skillsBtn.addEventListener("click", activateSkills);
+            });
+        </script>
+    </head>
+    <body class="bg-bg text-white font-space">
+        <!-- HERO -->
+        <section
+            class="flex flex-col items-center text-center gap-[1rem] mt-[2rem]"
+        >
+            <div
+                class="w-[8rem] h-[8rem] rounded-full overflow-hidden flex items-center justify-center bg-black"
+            >
+                <img
+                    src="assets/profile1.png"
+                    alt="Ibnu Hibban"
+                    class="w-full h-full object-cover object-center"
+                />
+            </div>
 
-  <!-- Web Apartemen -->
-  <a href="web-apartemen.html" class="relative w-[400px] h-[230px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition">
-    <img src="assets/pw-apart/thumbnail-1.jpg" alt="Aplikasi Web Apartemen" class="w-full h-full object-cover" />
-    <span class="absolute bottom-[10px] left-1/2 -translate-x-1/2 bg-black/60 px-[8px] py-[3px] rounded-[5px] text-[1rem] opacity-0 hover:opacity-100 transition">Aplikasi Web Apartemen</span>
-  </a>
+            <div class="flex flex-col gap-[0.5rem]">
+                <h1 class="text-[1.5rem] font-normal">Ibnu Hibban</h1>
+                <h2 class="text-[1rem] text-textSub">
+                    Full Stack Web Developer
+                </h2>
 
-  <!-- Logistic Engineering -->
-  <a href="logistic-engineering.html" class="relative w-[400px] h-[230px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition">
-    <img src="assets/logistic/thumbnail.jpg" alt="Aplikasi Web Logistics Engineering" class="w-full h-full object-cover" />
-    <span class="absolute bottom-[10px] left-1/2 -translate-x-1/2 bg-black/60 px-[8px] py-[3px] rounded-[5px] text-[1rem] opacity-0 hover:opacity-100 transition">Aplikasi Web Logistics Engineering</span>
-  </a>
+                <div class="flex justify-center gap-[1rem] mt-[0.5rem]">
+                    <a href="https://github.com/ibnuhibbann">
+                        <img
+                            src="assets/github_dark.png"
+                            alt="GitHub"
+                            class="h-[1.5rem] hover:scale-[0.98] transition"
+                        />
+                    </a>
+                    <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=ibnuhibban077@gmail.com"
+                        target="_blank"
+                    >
+                        <img
+                            src="assets/email_dark.png"
+                            alt="Email"
+                            class="h-[1.5rem] hover:scale-[0.98] transition"
+                        />
+                    </a>
+                </div>
+            </div>
+        </section>
 
-  <!-- Absensi Karyawan -->
-  <a href="absensi-karyawan-rfid.html" class="relative w-[400px] h-[230px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition">
-    <img src="assets/absensi-karyawan/thumbnail.jpg" alt="Sistem Absensi Karyawan RFID" class="w-full h-full object-cover" />
-    <span class="absolute bottom-[10px] left-1/2 -translate-x-1/2 bg-black/60 px-[8px] py-[3px] rounded-[5px] text-[1rem] opacity-0 hover:opacity-100 transition">Sistem Absensi Karyawan RFID ESP32-CAM</span>
-  </a>
+        <!-- EXPERIENCE -->
+        <section
+            class="flex justify-center text-center mt-[1.4rem] max-w-[20rem] mx-auto"
+        >
+            <h2 class="text-[0.9rem] text-textSub font-light">
+                Informatics Engineering<br />STMIK Widya Cipta Dharma
+            </h2>
+        </section>
 
-  <!-- Point Of Sale -->
-  <a href="point-of-sale.html" class="relative w-[400px] h-[230px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition">
-    <img src="assets/pw-mart/thumbnail.jpg" alt="Aplikasi Web Point Of Sale" class="w-full h-full object-cover" />
-    <span class="absolute bottom-[10px] left-1/2 -translate-x-1/2 bg-black/60 px-[8px] py-[3px] rounded-[5px] text-[1rem] opacity-0 hover:opacity-100 transition">Aplikasi Web Point Of Sale</span>
-  </a>
-</section>
+        <!-- CTA -->
+        <section class="flex justify-center mt-[1.2rem]">
+            <a href="assets/CV-1.pdf" target="_blank">
+                <button
+                    class="w-[9rem] h-[3rem] rounded-[0.7rem] bg-btn font-semibold hover:bg-btnHover transition"
+                >
+                    Download CV
+                </button>
+            </a>
+        </section>
 
-<!-- SKILLS -->
-<section id="skills" class="hidden flex-col items-center gap-[2rem] mt-[2rem] lg:flex-row lg:flex-wrap lg:justify-center lg:w-[56rem] lg:mx-auto">
+        <!-- TOGGLE -->
+        <section class="flex justify-center mt-[1.5rem]">
+            <div
+                class="flex items-center gap-[2rem] bg-light p-[0.5rem] rounded-[0.7rem] w-[20rem] h-[4rem] justify-center"
+            >
+                <button
+                    id="portfolio-btn"
+                    class="w-[8.5rem] h-[3rem] rounded-[0.7rem] bg-white text-black font-semibold leading-none"
+                >
+                    Portfolio
+                </button>
+                <button
+                    id="skills-btn"
+                    class="w-[8.5rem] h-[3rem] rounded-[0.7rem] bg-transparent text-[#828282] font-semibold leading-none"
+                >
+                    Skills
+                </button>
+            </div>
+        </section>
 
-  <!-- FRONTEND -->
-  <div class="text-center">
-    <h3 class="font-semibold mb-[1rem]">Frontend</h3>
-    <article class="flex flex-wrap justify-center">
-      <p class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#ffd8b2] text-[#6b3e00] font-semibold">HTML</p>
-      <p class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#cce0ff] text-[#003366] font-semibold">CSS</p>
-      <p class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#fff5b2] text-[#665500] font-semibold">JavaScript</p>
-      <p class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#ccead9] text-[#0f5d3e] font-semibold">Vue.js</p>
-      <p class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#e6dbf5] text-[#4b2a5e] font-semibold">Bootstrap</p>
-      <p class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#d0f0fd] text-[#05506a] font-semibold">Tailwind</p>
-    </article>
-  </div>
+        <!-- PORTFOLIO -->
 
-  <!-- BACKEND -->
-  <div class="text-center">
-    <h3 class="font-semibold mb-[1rem]">Backend</h3>
-    <article class="flex flex-wrap justify-center">
-      <p class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#e0d9f0] text-[#3b2a5e] font-semibold">PHP</p>
-      <p class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#cce7f0] text-[#004d5a] font-semibold">MySQL</p>
-      <p class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#ffdada] text-[#800000] font-semibold">Laravel</p>
-      <p class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#ffe5d6] text-[#663300] font-semibold">Postman</p>
-    </article>
-  </div>
+        <section
+            id="portfolio"
+            class="flex flex-col items-center gap-[1rem] mt-[2rem] lg:flex-row lg:flex-wrap lg:justify-center lg:w-[65rem] lg:mx-auto"
+        >
+            <!-- Desa Digital -->
+            <a
+                href="web-desa-digital.html"
+                class="group relative w-[400px] h-[230px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+            >
+                <img
+                    src="assets/desa-digital/2.png"
+                    alt="Web Desa Digital"
+                    class="w-full h-full object-cover"
+                />
+                <span
+                    class="pointer-events-none absolute bottom-[10px] left-1/2 -translate-x-1/2 bg-black/60 px-[8px] py-[3px] rounded-[5px] text-[1rem] text-center leading-tight opacity-0 group-hover:opacity-100 transition"
+                    >Web Desa Digital</span
+                >
+            </a>
 
-  <!-- OTHERS -->
-  <div class="text-center lg:w-full lg:flex lg:justify-center">
-    <div>
-      <h3 class="font-semibold mb-[1rem]">Others</h3>
-      <article class="flex flex-wrap justify-center">
-        <p class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#d6e6ff] text-[#003366] font-semibold">Git</p>
-        <p class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#e0dfe0] text-[#1a4d1a] font-semibold">GitHub</p>
-      </article>
-    </div>
-  </div>
-</section>
+            <!-- Web Apartemen -->
+            <a
+                href="web-apartemen.html"
+                class="group relative w-[400px] h-[230px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+            >
+                <img
+                    src="assets/pw-apart/thumbnail-1.jpg"
+                    alt="Aplikasi Web Apartemen"
+                    class="w-full h-full object-cover"
+                />
+                <span
+                    class="pointer-events-none absolute bottom-[10px] left-1/2 -translate-x-1/2 bg-black/60 px-[8px] py-[3px] rounded-[5px] text-[1rem] text-center leading-tight opacity-0 group-hover:opacity-100 transition"
+                    >Aplikasi Web Apartemen</span
+                >
+            </a>
 
-<!-- FOOTER -->
-<footer class="flex justify-center my-[3rem] text-[0.9rem] text-textSub">
-  © Ibnu Hibban 2023
-</footer>
+            <!-- Logistic Engineering -->
+            <a
+                href="logistic-engineering.html"
+                class="group relative w-[400px] h-[230px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+            >
+                <img
+                    src="assets/logistic/thumbnail.jpg"
+                    alt="Aplikasi Web Logistics Engineering"
+                    class="w-full h-full object-cover"
+                />
+                <span
+                    class="pointer-events-none absolute bottom-[10px] left-1/2 -translate-x-1/2 bg-black/60 px-[8px] py-[3px] rounded-[5px] text-[1rem] text-center leading-tight opacity-0 group-hover:opacity-100 transition"
+                    >Aplikasi Web Logistics Engineering</span
+                >
+            </a>
 
-</body>
+            <!-- Absensi Karyawan -->
+            <a
+                href="absensi-karyawan-rfid.html"
+                class="group relative w-[400px] h-[230px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+            >
+                <img
+                    src="assets/absensi-karyawan/thumbnail.jpg"
+                    alt="Sistem Absensi Karyawan RFID"
+                    class="w-full h-full object-cover"
+                />
+                <span
+                    class="pointer-events-none absolute bottom-[10px] left-1/2 -translate-x-1/2 bg-black/60 px-[8px] py-[3px] rounded-[5px] text-[1rem] text-center leading-tight opacity-0 group-hover:opacity-100 transition"
+                    >Sistem Absensi Karyawan RFID ESP32-CAM</span
+                >
+            </a>
+
+            <!-- Point Of Sale -->
+            <a
+                href="point-of-sale.html"
+                class="group relative w-[400px] h-[230px] overflow-hidden rounded-[10px] shadow hover:scale-[0.98] transition"
+            >
+                <img
+                    src="assets/pw-mart/thumbnail.jpg"
+                    alt="Aplikasi Web Point Of Sale"
+                    class="w-full h-full object-cover"
+                />
+                <span
+                    class="pointer-events-none absolute bottom-[10px] left-1/2 -translate-x-1/2 bg-black/60 px-[8px] py-[3px] rounded-[5px] text-[1rem] text-center leading-tight opacity-0 group-hover:opacity-100 transition"
+                    >Aplikasi Web Point Of Sale</span
+                >
+            </a>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="hidden flex-col items-center mt-[2rem]">
+            <!-- GRID FRONTEND & BACKEND -->
+            <div
+                class="w-full max-w-[56rem] flex flex-col gap-[2.5rem] lg:flex-row lg:justify-between"
+            >
+                <!-- FRONTEND -->
+                <div class="text-center">
+                    <h3 class="font-semibold mb-[1rem]">Frontend</h3>
+                    <article class="flex flex-wrap justify-center">
+                        <p
+                            class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#ffd8b2] text-[#6b3e00] font-semibold leading-none"
+                        >
+                            <img
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                                class="h-[20px]"
+                            />
+                            HTML
+                        </p>
+                        <p
+                            class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#cce0ff] text-[#003366] font-semibold leading-none"
+                        >
+                            <img
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                                class="h-[20px]"
+                            />
+                            CSS
+                        </p>
+                        <p
+                            class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#fff5b2] text-[#665500] font-semibold leading-none"
+                        >
+                            <img
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                                class="h-[20px]"
+                            />
+                            JavaScript
+                        </p>
+                        <p
+                            class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#ccead9] text-[#0f5d3e] font-semibold leading-none"
+                        >
+                            <img
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"
+                                class="h-[20px]"
+                            />
+                            Vue.js
+                        </p>
+                        <p
+                            class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#e6dbf5] text-[#4b2a5e] font-semibold leading-none"
+                        >
+                            <img
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg"
+                                class="h-[20px]"
+                            />
+                            Bootstrap
+                        </p>
+                        <p
+                            class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#d0f0fd] text-[#05506a] font-semibold leading-none"
+                        >
+                            <img
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg"
+                                class="h-[20px]"
+                            />
+                            Tailwind
+                        </p>
+                    </article>
+                </div>
+
+                <!-- BACKEND -->
+                <div class="text-center">
+                    <h3 class="font-semibold mb-[1rem]">Backend</h3>
+                    <article class="flex flex-wrap justify-center">
+                        <p
+                            class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#e0d9f0] text-[#3b2a5e] font-semibold leading-none"
+                        >
+                            <img
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
+                                class="h-[20px]"
+                            />
+                            PHP
+                        </p>
+                        <p
+                            class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#ffdada] text-[#800000] font-semibold leading-none"
+                        >
+                            <img
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-original.svg"
+                                class="h-[20px]"
+                            />
+                            Laravel
+                        </p>
+                        <p
+                            class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#cce7f0] text-[#004d5a] font-semibold leading-none"
+                        >
+                            <img
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+                                class="h-[20px]"
+                            />
+                            MySQL
+                        </p>
+                        
+                        <p class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#e0f0ff] text-[#336791] font-semibold leading-none">
+  <img
+    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"
+    class="h-[20px]"
+    alt="PostgreSQL"
+  />
+  PostgreSQL
+</p>
+
+                    </article>
+                </div>
+            </div>
+
+            <!-- OTHERS -->
+            <div class="text-center mt-[2.5rem]">
+                <h3 class="font-semibold mb-[1rem]">Others</h3>
+                <article class="flex flex-wrap justify-center">
+                    <p
+                        class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#d6e6ff] text-[#003366] font-semibold leading-none"
+                    >
+                        <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
+                            class="h-[20px]"
+                        />
+                        Git
+                    </p>
+                    <p
+                        class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#e0dfe0] text-[#1a4d1a] font-semibold leading-none"
+                    >
+                        <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+                            class="h-[20px]"
+                        />
+                        GitHub
+                    </p>
+                    <p
+                        class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#e0f2ff] text-[#0b5ed7] font-semibold leading-none"
+                    >
+                        <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg"
+                            alt="Docker"
+                            class="h-[20px]"
+                        />
+                        Docker
+                    </p>
+                    <p
+                        class="inline-flex items-center gap-[6px] px-[0.9rem] py-[0.5rem] m-[0.3rem] rounded-[0.5rem] bg-[#ffe5d6] text-[#663300] font-semibold leading-none"
+                    >
+                        <img
+                            src="https://cdn.worldvectorlogo.com/logos/postman.svg"
+                            class="h-[20px]"
+                        />
+                        Postman
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer
+            class="flex justify-center my-[3rem] text-[0.9rem] text-textSub"
+        >
+            © Ibnu Hibban 2023
+        </footer>
+    </body>
 </html>
