@@ -79,26 +79,7 @@
                     id="desc"
                     class="max-h-[60px] overflow-hidden transition-all duration-500 text-justify"
                 >
-                    Aplikasi Web Booking Lapangan Badminton merupakan sistem
-                    manajemen pemesanan lapangan yang dirancang untuk memudahkan
-                    pengelolaan jadwal, transaksi, dan data pelanggan secara
-                    terpusat. Aplikasi ini menyediakan halaman publik untuk
-                    menampilkan ketersediaan lapangan berdasarkan tanggal dan
-                    slot waktu, sehingga pengguna dapat mengetahui jadwal yang
-                    tersedia secara real-time.
-                    <br /><br />
-                    Dari sisi admin, sistem dilengkapi dengan dashboard analitik
-                    yang menampilkan ringkasan booking harian dan mingguan,
-                    pendapatan, tren transaksi, serta distribusi status booking.
-                    Admin dapat mengelola data booking, riwayat pemesanan,
-                    status booking (Booking, Cancelled, Finished), status
-                    pembayaran (Belum DP, DP, Lunas), data lapangan beserta
-                    harga per slot, slot waktu main, dan manajemen pengguna.
-                    <br /><br />
-                    Aplikasi ini mendukung pencatatan pembayaran bertahap (DP
-                    dan pelunasan), pemantauan riwayat booking, serta
-                    pengelolaan operasional lapangan secara efisien melalui satu
-                    dashboard terintegrasi.
+                    QueueFlow adalah aplikasi sistem antrian online berbasis web yang dikembangkan menggunakan Laravel dan Vue.js (Inertia). Aplikasi ini mendukung pengelolaan antrian layanan secara terstruktur dengan pembagian peran pengguna (Admin, Customer Service, dan Queue Officer). Fitur utama meliputi pengambilan nomor antrian, pemanggilan antrian per loket, tampilan display antrian, serta laporan harian berbentuk PDF dengan filter layanan dan tanggal. Sistem dirancang menyerupai alur layanan nyata seperti di bank atau instansi publik, dengan fokus pada keamanan akses, keterlacakan data, dan kemudahan pengelolaan operasional.    
                 </p>
 
                 <button
@@ -174,12 +155,12 @@
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/badminton-booking/booking-view.png"
+                        src="assets/antrian/display.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Booking View Public</span
+                        >Display</span
                     >
                 </div>
                 <div
@@ -188,12 +169,12 @@
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/badminton-booking/dashboard.png"
+                        src="assets/antrian/ambil-nomor.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Dashboad Admin</span
+                        >Get Number</span
                     >
                 </div>
             </div>
@@ -205,12 +186,12 @@
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/badminton-booking/bookings.png"
+                        src="assets/antrian/nomor-antrian.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >All Booking</span
+                        >Queue Number</span
                     >
                 </div>
                 <div
@@ -219,12 +200,12 @@
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/badminton-booking/booking.png"
+                        src="assets/antrian/antrian-pelayanan-cs.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Booking Detail</span
+                        >Queue Service</span
                     >
                 </div>
             </div>
@@ -236,12 +217,12 @@
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/badminton-booking/riwayat-booking.png"
+                        src="assets/antrian/antiran-layanan-cs-administrasi.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Bookling History</span
+                        >Queue Service Administrasion</span
                     >
                 </div>
                 <div
@@ -250,12 +231,12 @@
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/badminton-booking/status-booking.png"
+                        src="assets/antrian/admin-dashboard.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Booking Status</span
+                        >Admin Dashboard</span
                     >
                 </div>
             </div>
@@ -267,12 +248,12 @@
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/badminton-booking/status-pembayaran.png"
+                        src="assets/antrian/admin-riwayat-antrian.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Payment Status</span
+                        >Admin Queue History</span
                     >
                 </div>
                 <div
@@ -281,12 +262,12 @@
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/badminton-booking/time-slot.png"
+                        src="assets/antrian/admin-layanan.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Time Slot</span
+                        >Admin Service</span
                     >
                 </div>
             </div>
@@ -298,12 +279,12 @@
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/badminton-booking/lapangan.png"
+                        src="assets/antrian/admin-loket.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Court</span
+                        >Admin Locket</span
                     >
                 </div>
                 <div
@@ -312,14 +293,29 @@
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/badminton-booking/users.png"
+                        src="assets/antrian/admin-user-customer-service.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Users</span
+                        >Admin User Customer Service</span
                     >
                 </div>
+            </div>
+
+            <div
+                data-aos="fade-up"
+                data-aos-delay="300"
+                class="group relative w-full h-[500px] rounded-lg overflow-hidden shadow"
+            >
+                <img
+                    src="assets/antrian/admin-laporan.png"
+                    class="w-full h-full object-cover cursor-pointer zoom-img"
+                />
+                <span
+                    class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
+                    >Admin Report</span
+                >
             </div>
         </section>
 
