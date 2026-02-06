@@ -3,9 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>
-            Aplikasi Web Apartemen Pandan Wangi Suite Samarinda - Ibnu Hibban
-        </title>
+        <title>Booking Court Badminton - Ibnu Hibban</title>
         <link rel="icon" type="image/png" href="assets/icon.png" />
 
         <!-- Space Grotesk -->
@@ -48,15 +46,7 @@
             });
         </script>
     </head>
-
     <body class="bg-bg text-white font-space relative overflow-x-hidden">
-        <!-- FIXED BACK BUTTON (GLOBAL, NOT AFFECTED BY AOS TRANSFORM) -->
-        <a
-            href="index.html"
-            class="fixed top-4 left-4 z-50 text-sm px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur transition"
-        >
-            ← Back
-        </a>
         <!-- GRADIENT BACKGROUND (SAMA DENGAN index.html) -->
         <div class="pointer-events-none fixed inset-0 -z-10">
             <div class="absolute inset-0 bg-bg"></div>
@@ -68,35 +58,49 @@
             ></div>
         </div>
 
-        <!-- FIXED BACK BUTTON (GLOBAL, NOT AFFECTED BY AOS TRANSFORM) -->
+        <a
+            href="index.html"
+            class="fixed top-4 left-4 z-10 text-sm px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 transition"
+            >← Back</a
+        >
 
         <!-- HERO -->
         <section
             data-aos="fade-up"
-            class="relative flex flex-col items-center text-center gap-3 pt-16 px-4"
+            class="relative flex flex-col items-center text-center gap-4 pt-16 px-4"
         >
-            <h1 class="text-2xl font-medium leading-snug">
-                Aplikasi Web Apartemen<br />Pandan Wangi Suite Samarinda
+            <h1 class="text-2xl font-medium">
+                Aplikasi Web Booking Lapangan Badminton
             </h1>
-            <h2 class="text-sm text-sub">PT Diya Property Utama</h2>
 
             <!-- DESCRIPTION -->
-            <div
-                class="max-w-2xl text-sm text-sub leading-relaxed relative mt-2"
-            >
+            <div class="max-w-2xl text-sm text-sub leading-relaxed relative">
                 <p
                     id="desc"
                     class="max-h-[60px] overflow-hidden transition-all duration-500 text-justify"
                 >
-                    Web Apartemen Pandan Wangi Suite Samarinda adalah aplikasi
-                    berbasis web yang dibangun menggunakan PHP, MySQL, dan
-                    Bootstrap, dirancang untuk membantu bagian front office atau
-                    admin dalam mengelola data penginapan tamu dan unit-unit
-                    apartemen. Melalui sistem ini, admin dapat mencatat data
-                    tamu, mengatur reservasi, memantau ketersediaan dan status
-                    setiap unit, serta mengelola informasi transaksi dan laporan
-                    secara efisien dan terpusat.
+                    Aplikasi Web Booking Lapangan Badminton merupakan sistem
+                    manajemen pemesanan lapangan yang dirancang untuk memudahkan
+                    pengelolaan jadwal, transaksi, dan data pelanggan secara
+                    terpusat. Aplikasi ini menyediakan halaman publik untuk
+                    menampilkan ketersediaan lapangan berdasarkan tanggal dan
+                    slot waktu, sehingga pengguna dapat mengetahui jadwal yang
+                    tersedia secara real-time.
+                    <br /><br />
+                    Dari sisi admin, sistem dilengkapi dengan dashboard analitik
+                    yang menampilkan ringkasan booking harian dan mingguan,
+                    pendapatan, tren transaksi, serta distribusi status booking.
+                    Admin dapat mengelola data booking, riwayat pemesanan,
+                    status booking (Booking, Cancelled, Finished), status
+                    pembayaran (Belum DP, DP, Lunas), data lapangan beserta
+                    harga per slot, slot waktu main, dan manajemen pengguna.
+                    <br /><br />
+                    Aplikasi ini mendukung pencatatan pembayaran bertahap (DP
+                    dan pelunasan), pemantauan riwayat booking, serta
+                    pengelolaan operasional lapangan secara efisien melalui satu
+                    dashboard terintegrasi.
                 </p>
+
                 <button
                     id="toggleDesc"
                     class="mt-2 w-8 h-8 rounded-full bg-white text-black flex items-center justify-center mx-auto transition"
@@ -112,44 +116,60 @@
             >
                 <span
                     class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
-                    ><img src="assets/stack/php.svg" class="w-4" />PHP</span
                 >
+                    <img src="assets/stack/php.svg" class="w-4" />PHP
+                </span>
                 <span
                     class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
-                    ><img
-                        src="assets/stack/bootstrap.png"
+                >
+                    <img
+                        src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg"
                         class="w-4"
-                    />Bootstrap</span
-                >
+                    />Laravel 12
+                </span>
                 <span
                     class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
-                    ><img
+                >
+                    <img
                         src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
                         class="w-4"
-                    />MySQL</span
+                    />MySQL
+                </span>
+                <span
+                    class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
                 >
+                    <img src="assets/stack/filament.png" class="w-4" />Filament
+                    v4
+                </span>
+                <span
+                    class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
+                >
+                    <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                        class="w-4"
+                    />Tailwind
+                </span>
             </div>
         </section>
 
-        <!-- PORTFOLIO GRID (DELAY BERTAHAP) -->
+        <!-- PORTFOLIO GRID (ASLI, TIDAK DIKURANGI) -->
         <section
             data-aos="fade-up"
             class="mt-10 flex flex-col items-center gap-6 max-w-[65rem] mx-auto px-4"
         >
-            <!-- ROW 1 -->
             <div class="flex flex-col lg:flex-row gap-6 w-full">
                 <div
                     data-aos="fade-up"
-                    data-aos-delay="0"
+                    data-aos-delay="100"
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/pw-apart/2.JPG"
+                        src="assets/badminton-booking/booking-view.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Halaman Dashboard</span
+                        >Booking View Public</span
                     >
                 </div>
                 <div
@@ -158,62 +178,138 @@
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/pw-apart/3.JPG"
+                        src="assets/badminton-booking/dashboard.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Halaman Login</span
+                        >Dashboad Admin</span
                     >
                 </div>
             </div>
 
-            <!-- ROW 2 -->
             <div class="flex flex-col lg:flex-row gap-6 w-full">
                 <div
                     data-aos="fade-up"
-                    data-aos-delay="200"
+                    data-aos-delay="100"
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/pw-apart/4.png"
+                        src="assets/badminton-booking/bookings.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Data Karyawan</span
+                        >All Booking</span
                     >
                 </div>
                 <div
                     data-aos="fade-up"
-                    data-aos-delay="300"
+                    data-aos-delay="100"
                     class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
                     <img
-                        src="assets/pw-apart/5.JPG"
+                        src="assets/badminton-booking/booking.png"
                         class="w-full h-full object-cover cursor-pointer zoom-img"
                     />
                     <span
                         class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Rekap Absensi</span
+                        >Booking Detail</span
                     >
                 </div>
             </div>
 
-            <!-- ROW 3 (FULL WIDTH) -->
-            <div
-                data-aos="fade-up"
-                data-aos-delay="400"
-                class="group relative w-full h-[360px] rounded-lg overflow-hidden shadow"
-            >
-                <img
-                    src="assets/pw-apart/6.jpg"
-                    class="w-full h-full object-cover cursor-pointer zoom-img"
-                />
-                <span
-                    class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                    >Data Kartu RFID Tidak Dikenali</span
+            <div class="flex flex-col lg:flex-row gap-6 w-full">
+                <div
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                    class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
                 >
+                    <img
+                        src="assets/badminton-booking/riwayat-booking.png"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    />
+                    <span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
+                        >Bookling History</span
+                    >
+                </div>
+                <div
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                    class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/badminton-booking/status-booking.png"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    />
+                    <span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
+                        >Booking Status</span
+                    >
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-6 w-full">
+                <div
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                    class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/badminton-booking/status-pembayaran.png"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    />
+                    <span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
+                        >Payment Status</span
+                    >
+                </div>
+                <div
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                    class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/badminton-booking/time-slot.png"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    />
+                    <span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
+                        >Time Slot</span
+                    >
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-6 w-full">
+                <div
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                    class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/badminton-booking/lapangan.png"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    />
+                    <span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
+                        >Court</span
+                    >
+                </div>
+                <div
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                    class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
+                >
+                    <img
+                        src="assets/badminton-booking/users.png"
+                        class="w-full h-full object-cover cursor-pointer zoom-img"
+                    />
+                    <span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
+                        >Users</span
+                    >
+                </div>
             </div>
         </section>
 

@@ -9,10 +9,7 @@
         <!-- Space Grotesk -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
         <!-- Tailwind CDN -->
         <script src="https://cdn.tailwindcss.com"></script>
@@ -20,211 +17,140 @@
             tailwind.config = {
                 theme: {
                     extend: {
-                        fontFamily: { space: ["Space Grotesk", "sans-serif"] },
-                        colors: { bg: "#131313", sub: "#828282" },
+                        fontFamily: { space: ['Space Grotesk', 'sans-serif'] },
+                        colors: {
+                            bg: '#0a0a0a',
+                            sub: '#828282',
+                        },
                     },
                 },
             };
         </script>
-    </head>
-    <body class="bg-bg text-white font-space">
-        <!-- HERO -->
-        <section
-            class="relative flex flex-col items-center text-center gap-3 pt-16 px-4"
-        >
-            <a
-                href="index.html"
-                class="absolute top-4 left-4 z-10 text-sm px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 transition"
-                >← Back</a
-            >
 
+        <!-- AOS Animation (SAMA DENGAN index.html) -->
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                AOS.init({
+                    duration: 700,
+                    easing: 'ease-out-cubic',
+                    once: true,
+                });
+            });
+        </script>
+    </head>
+
+    <body class="bg-bg text-white font-space relative overflow-x-hidden">
+
+        <!-- FIXED BACK BUTTON (GLOBAL, NOT AFFECTED BY AOS TRANSFORM) -->
+        <a href="index.html" class="fixed top-4 left-4 z-50 text-sm px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur transition">
+            ← Back
+        </a>
+
+        <!-- GRADIENT BACKGROUND (SAMA DENGAN index.html) -->
+        <div class="pointer-events-none fixed inset-0 -z-10">
+            <div class="absolute inset-0 bg-bg"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(120%_80%_at_100%_0%,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0.08)_20%,rgba(255,255,255,0.03)_35%,transparent_60%)]"></div>
+            <div class="absolute inset-0 opacity-[0.05] bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.05)_0px,rgba(255,255,255,0.05)_1px,transparent_1px,transparent_6px)]"></div>
+        </div>
+
+        <!-- HERO -->
+        <section data-aos="fade-up" class="relative flex flex-col items-center text-center gap-3 pt-16 px-4">
             <h1 class="text-2xl font-medium">Aplikasi Web Point Of Sale</h1>
             <h2 class="text-sm text-sub">Pandan Wangi Mart</h2>
 
             <!-- DESCRIPTION -->
-            <div
-                class="max-w-2xl text-sm text-sub leading-relaxed relative mt-2"
-            >
-                <p
-                    id="desc"
-                    class="max-h-[60px] overflow-hidden transition-all duration-500 text-justify"
-                >
-                    Aplikasi Web Point Of Sale untuk Pandan Wangi Mart adalah
-                    solusi komprehensif yang dirancang untuk mengelola transaksi
-                    penjualan dan laporan keuangan secara efisien. Dengan
-                    antarmuka yang user-friendly, aplikasi ini memungkinkan staf
-                    toko untuk memproses penjualan dengan cepat, melacak stok
-                    barang secara real-time, dan menghasilkan laporan keuangan
-                    yang akurat. Aplikasi ini dikembangkan menggunakan PHP untuk
-                    logika backend, MySQL sebagai basis data, serta CSS untuk
-                    desain antarmuka yang responsif.
+            <div class="max-w-2xl text-sm text-sub leading-relaxed relative mt-2">
+                <p id="desc" class="max-h-[60px] overflow-hidden transition-all duration-500 text-justify">
+                    Aplikasi Web Point Of Sale untuk Pandan Wangi Mart adalah solusi komprehensif yang dirancang untuk mengelola transaksi penjualan dan laporan keuangan secara efisien. Dengan antarmuka yang user-friendly, aplikasi ini memungkinkan staf toko untuk memproses penjualan dengan cepat, melacak stok barang secara real-time, dan menghasilkan laporan keuangan yang akurat. Aplikasi ini dikembangkan menggunakan PHP untuk logika backend, MySQL sebagai basis data, serta CSS untuk desain antarmuka yang responsif.
                 </p>
-                <button
-                    id="toggleDesc"
-                    class="mt-2 w-8 h-8 rounded-full bg-white text-black flex items-center justify-center mx-auto transition"
-                >
-                    ▼
-                </button>
+                <button id="toggleDesc" class="mt-2 w-8 h-8 rounded-full bg-white text-black flex items-center justify-center mx-auto transition">▼</button>
             </div>
 
             <!-- STACK -->
-            <div class="flex flex-wrap justify-center gap-3 mt-5">
-                <span
-                    class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
-                    ><img src="assets/stack/php.svg" class="w-4" />PHP</span
-                >
-                <span
-                    class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
-                    ><img
-                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
-                        class="w-4"
-                    />CSS</span
-                >
-                <span
-                    class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"
-                    ><img
-                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
-                        class="w-4"
-                    />MySQL</span
-                >
+            <div data-aos="fade-up" class="flex flex-wrap justify-center gap-3 mt-5">
+                <span class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"><img src="assets/stack/php.svg" class="w-4" />PHP</span>
+                <span class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" class="w-4" />CSS</span>
+                <span class="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-lg"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" class="w-4" />MySQL</span>
             </div>
         </section>
 
-        <!-- PORTFOLIO GRID -->
-        <section
-            class="mt-10 flex flex-col items-center gap-6 max-w-[65rem] mx-auto px-4"
-        >
+        <!-- PORTFOLIO GRID (DELAY BERTAHAP) -->
+        <section data-aos="fade-up" class="mt-10 flex flex-col items-center gap-6 max-w-[65rem] mx-auto px-4">
             <div class="flex flex-col lg:flex-row gap-6 w-full">
-                <div
-                    class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
-                >
-                    <img
-                        src="assets/pw-mart/1.PNG"
-                        class="w-full h-full object-cover cursor-pointer zoom-img"
-                    />
-                    <span
-                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Halaman Kasir</span
-                    >
+                <div data-aos="fade-up" data-aos-delay="0" class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow">
+                    <img src="assets/pw-mart/1.PNG" class="w-full h-full object-cover cursor-pointer zoom-img" />
+                    <span class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition">Halaman Kasir</span>
                 </div>
-                <div
-                    class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
-                >
-                    <img
-                        src="assets/pw-mart/3.PNG"
-                        class="w-full h-full object-cover cursor-pointer zoom-img"
-                    />
-                    <span
-                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Halaman Barang</span
-                    >
+                <div data-aos="fade-up" data-aos-delay="100" class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow">
+                    <img src="assets/pw-mart/3.PNG" class="w-full h-full object-cover cursor-pointer zoom-img" />
+                    <span class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition">Halaman Barang</span>
                 </div>
             </div>
 
             <div class="flex flex-col lg:flex-row gap-6 w-full">
-                <div
-                    class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
-                >
-                    <img
-                        src="assets/pw-mart/4.PNG"
-                        class="w-full h-full object-cover cursor-pointer zoom-img"
-                    />
-                    <span
-                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Halaman Kategori Barang</span
-                    >
+                <div data-aos="fade-up" data-aos-delay="200" class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow">
+                    <img src="assets/pw-mart/4.PNG" class="w-full h-full object-cover cursor-pointer zoom-img" />
+                    <span class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition">Halaman Kategori Barang</span>
                 </div>
-                <div
-                    class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow"
-                >
-                    <img
-                        src="assets/pw-mart/5.PNG"
-                        class="w-full h-full object-cover cursor-pointer zoom-img"
-                    />
-                    <span
-                        class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                        >Halaman Data Supplier</span
-                    >
+                <div data-aos="fade-up" data-aos-delay="300" class="group relative w-full lg:w-1/2 h-[260px] rounded-lg overflow-hidden shadow">
+                    <img src="assets/pw-mart/5.PNG" class="w-full h-full object-cover cursor-pointer zoom-img" />
+                    <span class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition">Halaman Data Supplier</span>
                 </div>
             </div>
 
-            <div
-                class="group relative w-full h-[360px] rounded-lg overflow-hidden shadow"
-            >
-                <img
-                    src="assets/pw-mart/6.PNG"
-                    class="w-full h-full object-cover cursor-pointer zoom-img"
-                />
-                <span
-                    class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                    >Halaman Restok Barang</span
-                >
+            <div data-aos="fade-up" data-aos-delay="400" class="group relative w-full h-[360px] rounded-lg overflow-hidden shadow">
+                <img src="assets/pw-mart/6.PNG" class="w-full h-full object-cover cursor-pointer zoom-img" />
+                <span class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition">Halaman Restok Barang</span>
             </div>
 
-            <div
-                class="group relative w-full h-[360px] rounded-lg overflow-hidden shadow"
-            >
-                <img
-                    src="assets/pw-mart/2.PNG"
-                    class="w-full h-full object-cover cursor-pointer zoom-img"
-                />
-                <span
-                    class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition"
-                    >Tampilan Struk Penjualan Barang</span
-                >
+            <div data-aos="fade-up" data-aos-delay="500" class="group relative w-full h-[360px] rounded-lg overflow-hidden shadow">
+                <img src="assets/pw-mart/2.PNG" class="w-full h-full object-cover cursor-pointer zoom-img" />
+                <span class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-sm text-center opacity-0 group-hover:opacity-100 transition">Tampilan Struk Penjualan Barang</span>
             </div>
         </section>
 
         <!-- IMAGE MODAL -->
-        <div
-            id="imgModal"
-            class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50"
-        >
-            <span
-                id="closeModal"
-                class="absolute top-5 right-6 text-white text-3xl cursor-pointer"
-                >&times;</span
-            >
-            <img
-                id="modalImg"
-                class="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
-            />
+        <div id="imgModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
+            <span id="closeModal" class="absolute top-5 right-6 text-white text-3xl cursor-pointer">&times;</span>
+            <img id="modalImg" class="max-w-[90%] max-h-[90%] rounded-lg shadow-lg" />
         </div>
 
-        <footer class="mt-16 mb-6 text-center text-sm text-sub">
-            © Ibnu Hibban 2023
-        </footer>
+        <!-- FOOTER -->
+        <footer class="mt-16 mb-6 text-center text-sm text-sub">© Ibnu Hibban 2023</footer>
 
+        <!-- SCRIPT (ASLI) -->
         <script>
-            const btn = document.getElementById("toggleDesc");
-            const desc = document.getElementById("desc");
-            btn.addEventListener("click", () => {
-                desc.classList.toggle("max-h-[60px]");
-                desc.classList.toggle("max-h-[1000px]");
-                btn.textContent = btn.textContent === "▼" ? "▲" : "▼";
+            const btn = document.getElementById('toggleDesc');
+            const desc = document.getElementById('desc');
+            btn.addEventListener('click', () => {
+                desc.classList.toggle('max-h-[60px]');
+                desc.classList.toggle('max-h-[1000px]');
+                btn.textContent = btn.textContent === '▼' ? '▲' : '▼';
             });
 
-            const modal = document.getElementById("imgModal");
-            const modalImg = document.getElementById("modalImg");
-            const closeModal = document.getElementById("closeModal");
+            const modal = document.getElementById('imgModal');
+            const modalImg = document.getElementById('modalImg');
+            const closeModal = document.getElementById('closeModal');
 
-            document.querySelectorAll(".zoom-img").forEach((img) => {
-                img.addEventListener("click", () => {
-                    modal.classList.remove("hidden");
-                    modal.classList.add("flex");
+            document.querySelectorAll('.zoom-img').forEach((img) => {
+                img.addEventListener('click', () => {
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
                     modalImg.src = img.src;
                 });
             });
 
-            closeModal.addEventListener("click", () => {
-                modal.classList.add("hidden");
-                modal.classList.remove("flex");
+            closeModal.addEventListener('click', () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
             });
 
-            modal.addEventListener("click", (e) => {
+            modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
-                    modal.classList.add("hidden");
-                    modal.classList.remove("flex");
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
                 }
             });
         </script>
